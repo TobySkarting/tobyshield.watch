@@ -14,10 +14,10 @@
 	<div class="wrapper">
 		<nav>
 			<div class="title">
-				<a href="/" data-bind="click: function() { if (window.stop) { window.stop(); } else if (document.execCommand) { document.execCommand('Stop'); }; window.location.href = 'http://maple.watch'; }">maple.watch</a>
+				<a href="/" data-bind="click: function() { if (window.stop) { window.stop(); } else if (document.execCommand) { document.execCommand('Stop'); }; window.location.href = 'https://tobyshield.men'; }">TobyShield</a>
 			</div>
 			<div class="select" style="display:none" data-bind="visible: true">
-				<span class="select-text">Select a MapleStory version:</span>
+				<span class="select-text">選擇版本:</span>
 				<ul data-bind="foreach: versions">
 					<li data-bind="css: { active: abbr == $root.selected() }">
 						<a href="#" role="button" data-bind="attr: { href: available ? '#' + abbr + '-' + $root.getDefaultSubSelectionForVersion(abbr) : '', title: available ? name : 'Coming Soon!' }, css: { disabled: !available }, click: function() { if (available) { if (window.stop) { window.stop(); } else if (document.execCommand) { document.execCommand('Stop'); }; window.location.hash = '#' + abbr + '-' + $root.getDefaultSubSelectionForVersion(abbr); window.location.reload(); } else { return false; } }">
@@ -32,7 +32,7 @@
 			<div style="display:none" class="settings" data-bind="visible: true, click: function() { settings.showControls(true) }, visible: !settings.showControls()">
 				<span role="button" tabindex="1">
 					<i class="fa fa-cog"></i>
-					Controls
+					設定
 				</span>
 			</div>
 			<!-- /ko -->
@@ -45,15 +45,13 @@
 	<div class="wrapper" id="main-page" style="display:none" data-bind="visible: true">
 		<h1>
 			<img data-bind="attr: { src: 'icons/Mushroom.png' }" />
-			<span>Welcome to maple.watch!</span>
+			<span>Welcome!</span>
 		</h1>
-		<p class="tagline">The website which lets you track your connection to the MapleStory servers without having to open the game to find out if they're online!</p>
+		<p class="tagline">伺服器狀態立刻查！</p>
 		<section>
 			<article>
 				<div class="fake-table">
 					<div>
-						<h2>How do I use maple.watch?</h2>
-						<p>Begin by selecting the version of the game you want to check from the very top of the page or from the below list:</p>
 						<ul data-bind="foreach: versions" class="versions-list">
 							<li>
 								<a href="#" role="button" data-bind="attr: { href: available ? '#' + abbr + '-' + $root.getDefaultSubSelectionForVersion(abbr) : '', title: available ? name : 'Coming Soon!' }, css: { disabled: !available }, click: function() { if (available) { if (window.stop) { window.stop(); } else if (document.execCommand) { document.execCommand('Stop'); }; window.location.hash = '#' + abbr + '-' + $root.getDefaultSubSelectionForVersion(abbr); window.location.reload(); } else { return false; } }">
@@ -68,12 +66,6 @@
 								<!-- /ko -->
 							</li>
 						</ul>
-						<p>From there you can select the server collection (or <em>world</em>, if you like) you wish to check the status of.</p>
-					</div>
-					<div class="tutorial">
-						<a href="tutorial/tutorial1.png" target="_blank">
-							<img src="tutorial/tutorial1.png" alt="Tutorial 1" />
-						</a>
 					</div>
 				</div>
 				
@@ -102,50 +94,50 @@
 	<div style="display:none" id="controls" class="wrapper" data-bind="visible: settings.showControls()">
 		<section>
 			<div class="info">
-				<h2>Controls</h2>
+				<h2>設定</h2>
 				<p>Use these to adjust how the site works.</p>
 				<p>Values are stored as cookies, meaning they'll save for your next visit.</p>
 			</div>
 			<div class="content">
 				<article>
 					<label>
-						<span>Check Delay Offset <small>(ms)</small></span>
+						<span>查詢間隔 <small>(ms)</small></span>
 						<span class="control">
 							<input type="number" data-bind="value: settings.delay" />
 						</span>
 					</label>
-					<footer>This number (in milliseconds) sets the delay between checking each server. The default value is 100, but you may want to increase this if you notice the ping response slowly increasing between each server.</footer>
+					<!--footer>This number (in milliseconds) sets the delay between checking each server. The default value is 100, but you may want to increase this if you notice the ping response slowly increasing between each server.</footer-->
 				</article>
 				<article>
 					<label>
-						<span>Check Timeout <small>(ms)</small></span>
+						<span>查詢超時 <small>(ms)</small></span>
 						<span class="control">
 							<input type="number" data-bind="value: settings.timeout" />
 						</span>
 					</label>
-					<footer>This number (in milliseconds) determines how long we should wait before assuming a server is offline. The higher this is, the greater chance of false positives there will be. Ideally this should be set between 1500 and 10000.</footer>
+					<!--footer>This number (in milliseconds) determines how long we should wait before assuming a server is offline. The higher this is, the greater chance of false positives there will be. Ideally this should be set between 1500 and 10000.</footer-->
 				</article>
 				<article class="multiple">
 					<label title="Display the IP addresses and Port numbers for each server.">
-						<span>Show IPs and Ports</span>
+						<span>顯示 IP 及 Port</span>
 						<span class="control">
 							<input type="checkbox" data-bind="checked: settings.showIPPort" />
 						</span>
 					</label>
 					<label title="Display the millisecond connection time for each server alongside the status text.">
-						<span>Show Connection Time</span>
+						<span>顯示連線時間</span>
 						<span class="control">
 							<input type="checkbox" data-bind="checked: settings.showConnection"  />
 						</span>
 					</label>
 					<label title="Allow clicking on each server to refresh it.">
-						<span>Enable Click to Refresh</span>
+						<span>啟用點擊重整</span>
 						<span class="control">
 							<input type="checkbox" disabled data-bind="checked: settings.clickToRefresh"  />
 						</span>
 					</label>
 					<label>
-						<span>Fix Browser Ping Speed</span>
+						<span>修正瀏覽器速度</span>
 						<span class="control">
 							<input type="checkbox" data-bind="checked: settings.fixPing"  />
 						</span>
@@ -157,15 +149,15 @@
 			<span>
 				<button role="button" type="button"  data-bind="click: function() { modifySettings() }">
 					<i class="fa fa-check"></i>
-					Save and Reload
+					存檔並重整
 				</button>
 				<button role="button" type="button" class="plain" data-bind="click: function() { defaultSettings() }">
 					<i class="fa fa-history"></i>
-					Use Default
+					預設
 				</button>
 				<button role="button" type="button" class="plain cancel" data-bind="click: function() { settings.showControls(false) }">
 					<i class="fa fa-times"></i>
-					Close Controls
+					關閉
 				</button>
 			</span>
 		</footer>
@@ -178,11 +170,10 @@
 			<span data-bind="html: name"></span>
 		</h1>
 		<h2>
-			<small>Selected server:</small>
-			<img data-bind="attr: { src: 'icons/' + ( $root.selectedIcon() ) + '.png' }" />
+			<!--small>已選擇:</small-->
+			<!--img data-bind="attr: { src: 'icons/' + ( $root.selectedIcon() ) + '.png' }" /-->
 			<span data-bind="html: $root.subSelection()"></span>
 		</h2>
-		<p>To select a different world, click on its name in the Game Servers sidebar!</p>
 	</div>
 	<!-- ko if: applications.length == 0 -->
 	<div class="wrapper" style="display:none" data-bind="visible: true">
@@ -263,26 +254,9 @@
 	<!-- /ko -->
 	<!-- /ko -->
 	<!-- /ko -->
-	<div class="wrapper">
-		<article id="footer-top">
-			<a href="http://mesomushie.com">
-				<img src="assets/zt3BPcH.jpg" width="500px" alt="mesomushie.com">
-			</a>
-		</article>
-		<footer id="footer">&copy; Copyright <a href="http://maple.watch">maple.watch</a> 2015<br>All Rights Reserved</footer>
-	</div>
 	<script type="text/javascript" src="moment.min.js"></script>
 	<script type="text/javascript" src="knockout.min.js"></script>
 	<script type="text/javascript" src="jquery.min.js"></script>
 	<script type="text/javascript" src="checker.js"></script>
-	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-60273356-1', 'auto');
-  ga('send', 'pageview');
-	</script>
 </body>
 </html>
