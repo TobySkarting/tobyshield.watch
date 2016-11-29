@@ -221,6 +221,36 @@ var PingModel = function (servers) {
 				values: [],
 				isMapleStoryGameServer: true,
 				rel: "登入伺服器"
+			},
+			{
+				icon: "Bera.png",
+				name: "辛巴谷",
+				address: "119.10.159.170",
+				port: "8484",
+				interval: 5000,
+				values: [],
+				isMapleStoryGameServer: true,
+				rel: "登入伺服器"
+			},
+			{
+				icon: "Delphinus.png",
+				name: "西西谷",
+				address: "119.10.159.186",
+				port: "8484",
+				interval: 5000,
+				values: [],
+				isMapleStoryGameServer: true,
+				rel: "登入伺服器"
+			},
+			{
+				icon: "Croa.png",
+				name: "喵喵谷",
+				address: "103.11.38.126",
+				port: "8484",
+				interval: 5000,
+				values: [],
+				isMapleStoryGameServer: true,
+				rel: "登入伺服器"
 			}],
 			Tongnian: [{
 				icon: "Gemini.png",
@@ -293,6 +323,36 @@ var PingModel = function (servers) {
 				rel: "棉花谷"
 			}],
 			AsuraMS: [],
+			Xinba: [{
+				icon: "Bera.png",
+				name: "Channel 1",
+				address: "119.10.159.170",
+				port: "8586",
+				interval: 5000,
+				values: [],
+				isMapleStoryGameServer: true,
+				rel: "辛巴谷"
+			}],
+			XiXi: [{
+				icon: "Delphinus.png",
+				name: "Channel 1",
+				address: "119.10.159.186",
+				port: "8586",
+				interval: 5000,
+				values: [],
+				isMapleStoryGameServer: true,
+				rel: "西西谷"
+			}],
+			Miaomiao: [{
+				icon: "Croa.png",
+				name: "Channel 1",
+				address: "103.11.38.126",
+				port: "8586",
+				interval: 5000,
+				values: [],
+				isMapleStoryGameServer: true,
+				rel: "喵喵谷"
+			}],
 		}
 	};
 
@@ -366,6 +426,24 @@ var checker = {
 		english: false,
 		sub: "World"
 	},
+	{
+		icon: "Bera.png",
+		name: "辛巴谷",
+		english: false,
+		sub: "World"
+	},
+	{
+		icon: "Delphinus.png",
+		name: "西西谷",
+		english: false,
+		sub: "World"
+	},
+	{
+		icon: "Croa.png",
+		name: "喵喵谷",
+		english: false,
+		sub: "World"
+	},
 	],
 	[
 		servers.TWMS113.Login,
@@ -376,6 +454,9 @@ var checker = {
 		servers.TWMS113.Hercules,
 		servers.TWMS113.Mianhua,
 		servers.TWMS113.AsuraMS,
+		servers.TWMS113.Xinba,
+		servers.TWMS113.XiXi,
+		servers.TWMS113.Miaomiao,
 	]
 	)
 	]
