@@ -140,8 +140,8 @@ var PingModel = function (servers) {
 
 	var GameServer = function(version, timeOffset, icons, servers) {
 		return {
-			name: "Game Servers",
-			description: "These are the MapleStory " + version + " game servers.",
+			name: "伺服器",
+			description: "版本" + version,
 			selectedServers: ko.observable(loadingArr),
 			icons: icons,
 			timeOffset: timeOffset,
@@ -371,14 +371,14 @@ function UpdateSelectedServers(parent, index, name) {
 		window.clearInterval(loadingTimers[index]);
 	}
 
-	if (parent.name == "Game Servers" && !clockTicking) {
+	if (parent.name == "伺服器" && !clockTicking) {
 		clockTicking = true;
 		setInterval(function() {
 			var d = new Date(),
 					o = d.getTimezoneOffset() / 60;
 
 			d.setHours(d.getHours() + o + parent.timeOffset);
-			checker.currentTime('<span><i class="fa fa-clock-o"></i> Server Time</span> ' + moment(d).format('h:mm:ss') + ' <span>' + moment(d).format('A') + '</span>');
+			checker.currentTime('<span><i class="fa fa-clock-o"></i> 伺服器時間</span> ' + moment(d).format('h:mm:ss') + ' <span>' + moment(d).format('A') + '</span>');
 		}, 1000);
 	}
 
