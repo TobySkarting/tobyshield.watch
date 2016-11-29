@@ -155,7 +155,7 @@ var PingModel = function (servers) {
 			Login: [{
 				icon: "Gemini.png",
 				name: "童年谷",
-				address: "118.160.153.210",
+				address: "111.249.162.160",
 				port: "8484",
 				interval: 5000,
 				values: [],
@@ -185,7 +185,7 @@ var PingModel = function (servers) {
 			{
 				icon: "Cassiopeia.png",
 				name: "奇奇谷",
-				address: "180.177.129.27",
+				address: "106.1.254.72",
 				port: "8484",
 				interval: 5000,
 				values: [],
@@ -211,11 +211,21 @@ var PingModel = function (servers) {
 				values: [],
 				isMapleStoryGameServer: true,
 				rel: "登入伺服器"
+			},
+			{
+				icon: "Elysium.png",
+				name: "AsuraMS",
+				address: "220.131.144.153",
+				port: "8484",
+				interval: 5000,
+				values: [],
+				isMapleStoryGameServer: true,
+				rel: "登入伺服器"
 			}],
 			Tongnian: [{
 				icon: "Gemini.png",
 				name: "Channel 1",
-				address: "118.160.153.210",
+				address: "111.249.162.160",
 				port: "8586",
 				interval: 5000,
 				values: [],
@@ -255,7 +265,7 @@ var PingModel = function (servers) {
 			Cassiopeia: [{
 				icon: "Cassiopeia.png",
 				name: "Channel 1",
-				address: "180.177.129.27",
+				address: "106.1.254.72",
 				port: "8586",
 				interval: 5000,
 				values: [],
@@ -282,6 +292,7 @@ var PingModel = function (servers) {
 				isMapleStoryGameServer: true,
 				rel: "棉花谷"
 			}],
+			AsuraMS: [],
 		}
 	};
 
@@ -300,7 +311,7 @@ var checker = {
 	name: "MapleStory 113",
 	available: true,
 	complete: false,
-	icon: "Aquila.png",
+	icon: "StarPlanet.png",
 	short: "TWMS113",
 	serverCount: [
 	11
@@ -349,6 +360,12 @@ var checker = {
 		english: false,
 		sub: "World"
 	},
+	{
+		icon: "Elysium.png",
+		name: "AsuraMS",
+		english: false,
+		sub: "World"
+	},
 	],
 	[
 		servers.TWMS113.Login,
@@ -358,11 +375,24 @@ var checker = {
 		servers.TWMS113.Cassiopeia,
 		servers.TWMS113.Hercules,
 		servers.TWMS113.Mianhua,
+		servers.TWMS113.AsuraMS,
 	]
 	)
 	]
 },
-
+{
+	abbr: "TWMS117",
+	name: "MapleStory 117",
+	available: false,
+	complete: false,
+	icon: "Kradia.png",
+	short: "TWMS117",
+	serverCount: [
+	0
+	],
+	applications: [
+	],
+},
 ],
 updateSelectedServers: UpdateSelectedServers,
 selectedIcon: ko.observable(GetEnglishIconNameForServer(this.subSelection)),
