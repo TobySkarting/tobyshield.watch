@@ -153,7 +153,7 @@ var PingModel = function (servers) {
 
 		TWMS113: {
 			Login: [{
-				icon: "Ares.png",
+				icon: "Aquila.png",
 				name: "恰恰谷",
 				address: "61.218.24.203",
 				port: "8484",
@@ -163,7 +163,7 @@ var PingModel = function (servers) {
 				rel: "登入伺服器"
 			},
 			{
-				icon: "Ares.png",
+				icon: "Bootes.png",
 				name: "懷舊谷",
 				address: "59.121.104.118",
 				port: "8484",
@@ -173,7 +173,7 @@ var PingModel = function (servers) {
 				rel: "登入伺服器"
 			},
 			{
-				icon: "Artemis.png",
+				icon: "Cassiopeia.png",
 				name: "奇奇谷",
 				address: "180.177.129.27",
 				port: "8484",
@@ -183,9 +183,19 @@ var PingModel = function (servers) {
 				rel: "登入伺服器"
 			},
 			{
-				icon: "Generic.png",
+				icon: "Hercules.png",
 				name: "瘋子谷",
 				address: "220.132.134.97",
+				port: "8484",
+				interval: 5000,
+				values: [],
+				isMapleStoryGameServer: true,
+				rel: "登入伺服器"
+			},
+			{
+				icon: "Izar.png",
+				name: "棉花谷",
+				address: "61.218.238.74",
 				port: "8484",
 				interval: 5000,
 				values: [],
@@ -242,6 +252,16 @@ var PingModel = function (servers) {
 				isMapleStoryGameServer: true,
 				rel: "瘋子谷"
 			}],
+			Mianhua: [{
+				icon: "Izar.png",
+				name: "Channel 1",
+				address: "61.218.238.74",
+				port: "7575",
+				interval: 5000,
+				values: [],
+				isMapleStoryGameServer: true,
+				rel: "棉花谷"
+			}],
 		}
 	};
 
@@ -296,7 +316,13 @@ var checker = {
 		name: "瘋子谷",
 		english: false,
 		sub: "World"
-	}
+	},
+	{
+		icon: "Izar.png",
+		name: "棉花谷",
+		english: false,
+		sub: "World"
+	},
 	],
 	[
 		servers.TWMS113.Login,
@@ -304,6 +330,7 @@ var checker = {
 		servers.TWMS113.Bootes,
 		servers.TWMS113.Cassiopeia,
 		servers.TWMS113.Hercules,
+		servers.TWMS113.Mianhua,
 	]
 	)
 	]
