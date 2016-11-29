@@ -141,7 +141,7 @@ var PingModel = function (servers) {
 	var GameServer = function(version, timeOffset, icons, servers) {
 		return {
 			name: "伺服器",
-			description: "版本" + version,
+			description: "版本：" + version,
 			selectedServers: ko.observable(loadingArr),
 			icons: icons,
 			timeOffset: timeOffset,

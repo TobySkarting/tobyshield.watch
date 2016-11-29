@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>MapleStory Status Checker</title>
+	<title>全國最大楓之谷私服狀態查詢上線啦</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!--<meta charset="utf8">-->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -45,7 +45,7 @@
 	<div class="wrapper" id="main-page" style="display:none" data-bind="visible: true">
 		<h1>
 			<img data-bind="attr: { src: 'icons/Mushroom.png' }" />
-			<span>Welcome!</span>
+			<span>歡迎！</span>
 		</h1>
 		<p class="tagline">伺服器狀態立刻查！</p>
 		<section>
@@ -59,7 +59,7 @@
 									<span class="short-name" data-bind="text: short"></span>
 								</a>
 								<!-- ko if: !available -->
-								<span class="notice">&mdash; Coming soon</span>
+								<span class="notice">&mdash; 敬請期待</span>
 								<!-- /ko -->
 								<!-- ko if: available && !complete -->
 								<span class="notice">&mdash; beta</span>
@@ -78,8 +78,6 @@
 		<section>
 			<div class="info">
 				<h2>設定</h2>
-				<p>Use these to adjust how the site works.</p>
-				<p>Values are stored as cookies, meaning they'll save for your next visit.</p>
 			</div>
 			<div class="content">
 				<article>
@@ -176,7 +174,7 @@
 			<div class="info">
 				<h2 data-bind="text: name"></h2>
 				<ul data-bind="foreach: icons">
-					<li role="button" data-bind="attr: { 'data-for': name }, css: { active: name == $root.subSelection(), clickable: $parent.name == 'Game Servers' && (name != 'Login' || (name == 'Login' && ($root.selected() == 'GMS' || $root.selected() == 'MSEA'))) }, click: function() { if ($parent.name == 'Game Servers' && (name != 'Login' || (name == 'Login' && ($root.selected() == 'GMS' || $root.selected() == 'MSEA')))) { $root.updateSelectedServers($parent, 0, name) } }">
+					<li role="button" data-bind="attr: { 'data-for': name }, css: { active: name == $root.subSelection(), clickable: $parent.name == '伺服器' && (name != 'Login' || (name == 'Login' && ($root.selected() == 'GMS' || $root.selected() == 'TWMS113'))) }, click: function() { if ($parent.name == '伺服器' && (name != 'Login' || (name == 'Login' && ($root.selected() == 'GMS' || $root.selected() == 'TWMS113')))) { $root.updateSelectedServers($parent, 0, name) } }">
 						<span class="icon">
 							<!-- ko if: icon.charAt(0) != 'f' -->
 							<img data-bind="attr: { src: 'icons/' + icon }" />
@@ -194,7 +192,7 @@
 				<p data-bind="text: description"></p>
 				<!-- /ko -->
 			</div>
-			<!-- ko if: name == "Game Servers" -->
+			<!-- ko if: name == "伺服器" -->
 			<div class="server-time" data-bind="html: checker.currentTime(), 1000)"></div>
 			<!-- /ko -->
 			<div class="servers" data-bind="foreach: selectedServers()">
@@ -202,7 +200,7 @@
 				<p class="loading"><i class="fa fa-cog fa-spin"></i> Loading, please wait...</p>
 				<!-- /ko -->
 				<!-- ko if: unknown == false -->
-				<!-- ko if: $parent.name != "Game Servers" || rel == $root.subSelection() || (rel == 'Login' || (rel != 'Login' && ($root.selected() == 'GMS' || $root.selected() == 'MSEA'))) -->
+				<!-- ko if: $parent.name != "伺服器" || rel == $root.subSelection() || (rel == 'Login' || (rel != 'Login' && ($root.selected() == 'GMS' || $root.selected() == 'TWMS113'))) -->
 				<!-- ko if: name == "Channel 1" || name == "Cash Shop" || name == "Artemis" || name == "Star Planet 1" || name == "Boss Arena 1" || name == "Merge World" || name == "Cross World" || name == "Monster Life" || name == "Evolution Lab" -->
 				<br>
 				<!-- /ko -->
