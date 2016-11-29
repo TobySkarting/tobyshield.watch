@@ -153,6 +153,16 @@ var PingModel = function (servers) {
 
 		TWMS113: {
 			Login: [{
+				icon: "Gemini.png",
+				name: "童年谷",
+				address: "118.160.153.210",
+				port: "8484",
+				interval: 5000,
+				values: [],
+				isMapleStoryGameServer: true,
+				rel: "登入伺服器"
+			},
+			{
 				icon: "Aquila.png",
 				name: "恰恰谷",
 				address: "61.218.24.203",
@@ -201,6 +211,16 @@ var PingModel = function (servers) {
 				values: [],
 				isMapleStoryGameServer: true,
 				rel: "登入伺服器"
+			}],
+			Tongnian: [{
+				icon: "Gemini.png",
+				name: "Channel 1",
+				address: "118.160.153.210",
+				port: "8586",
+				interval: 5000,
+				values: [],
+				isMapleStoryGameServer: true,
+				rel: "童年谷"
 			}],
 			Aquila: [{
 				icon: "Aquila.png",
@@ -294,6 +314,12 @@ var checker = {
 		sub: ""
 	},
 	{
+		icon: "Gemini.png",
+		name: "童年谷",
+		english: false,
+		sub: "World"
+	},
+	{
 		icon: "Aquila.png",
 		name: "恰恰谷",
 		english: false,
@@ -326,6 +352,7 @@ var checker = {
 	],
 	[
 		servers.TWMS113.Login,
+		servers.TWMS113.Tongnian,
 		servers.TWMS113.Aquila,
 		servers.TWMS113.Bootes,
 		servers.TWMS113.Cassiopeia,
