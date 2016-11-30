@@ -242,7 +242,7 @@ var servers = {
             icon: "Croa.png",
             name: "喵喵谷",
             address: "103.11.38.126",
-            port: "8484",
+            port: "18484",
             interval: 5000,
             values: [],
             isMapleStoryGameServer: true,
@@ -342,7 +342,7 @@ var servers = {
             icon: "Croa.png",
             name: "Channel 1",
             address: "103.11.38.126",
-            port: "8586",
+            port: "18586",
             interval: 5000,
             values: [],
             isMapleStoryGameServer: true,
@@ -350,7 +350,7 @@ var servers = {
         }],
     },
     TWMS117: {
-    	
+
     }
 };
 var checker = {
