@@ -160,7 +160,7 @@ var servers = {
         Login: [{
             icon: "Gemini.png",
             name: "童年谷",
-            address: "111.249.162.160",
+            address: "220.135.55.5",
             port: "8484",
             interval: 5000,
             values: [],
@@ -251,7 +251,7 @@ var servers = {
         Tongnian: [{
             icon: "Gemini.png",
             name: "Channel 1",
-            address: "111.249.162.160",
+            address: "220.135.55.5",
             port: "8586",
             interval: 5000,
             values: [],
