@@ -178,7 +178,7 @@ var servers = {
         }, {
             icon: "Bootes.png",
             name: "懷舊谷",
-            address: "59.121.104.118",
+            address: "59.121.104.171",
             port: "8484",
             interval: 5000,
             values: [],
@@ -214,7 +214,7 @@ var servers = {
         }, {
             icon: "Elysium.png",
             name: "AsuraMS",
-            address: "220.131.144.153",
+            address: "220.131.144.181",
             port: "8484",
             interval: 5000,
             values: [],
@@ -243,6 +243,15 @@ var servers = {
             name: "喵喵谷",
             address: "103.11.38.126",
             port: "18484",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "登入伺服器"
+        }, {
+            icon: "Demethos.png",
+            name: "農藥谷",
+            address: "220.135.110.189",
+            port: "8484",
             interval: 5000,
             values: [],
             isMapleStoryGameServer: true,
@@ -280,7 +289,7 @@ var servers = {
         Bootes: [{
             icon: "Bootes.png",
             name: "Channel 1",
-            address: "59.121.104.118",
+            address: "59.121.104.171",
             port: "8586",
             interval: 5000,
             values: [],
@@ -347,6 +356,16 @@ var servers = {
             values: [],
             isMapleStoryGameServer: true,
             rel: "喵喵谷"
+        }],
+        Pesticide: [{
+            icon: "Demethos.png",
+            name: "Channel 1",
+            address: "220.135.110.189",
+            port: "8586",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "農藥谷"
         }],
     },
     TWMS117: {
@@ -424,7 +443,12 @@ var checker = {
             name: "喵喵谷",
             english: false,
             sub: "World"
-        }, ], [servers.TWMS113.Login, servers.TWMS113.Tongnian, servers.TWMS113.Aquila, servers.TWMS113.Bootes, servers.TWMS113.Cassiopeia, servers.TWMS113.Hercules, servers.TWMS113.Mianhua, servers.TWMS113.AsuraMS, servers.TWMS113.Xinba, servers.TWMS113.XiXi, servers.TWMS113.Miaomiao, ])]
+        }, {
+            icon: "Demethos.png",
+            name: "農藥谷",
+            english: false,
+            sub: "World"
+        }, ], [servers.TWMS113.Login, servers.TWMS113.Tongnian, servers.TWMS113.Aquila, servers.TWMS113.Bootes, servers.TWMS113.Cassiopeia, servers.TWMS113.Hercules, servers.TWMS113.Mianhua, servers.TWMS113.AsuraMS, servers.TWMS113.Xinba, servers.TWMS113.XiXi, servers.TWMS113.Miaomiao, servers.TWMS113.Pesticide, ])]
     }, {
         abbr: "TWMS117",
         name: "MapleStory 117",
