@@ -178,7 +178,7 @@ var servers = {
         }, {
             icon: "Bootes.png",
             name: "懷舊谷",
-            address: "59.121.104.171",
+            address: "59.121.104.215",
             port: "8484",
             interval: 5000,
             values: [],
@@ -187,7 +187,7 @@ var servers = {
         }, {
             icon: "Cassiopeia.png",
             name: "奇奇谷",
-            address: "106.1.254.72",
+            address: "101.138.163.203",
             port: "8484",
             interval: 5000,
             values: [],
@@ -214,7 +214,7 @@ var servers = {
         }, {
             icon: "Elysium.png",
             name: "AsuraMS",
-            address: "220.131.144.181",
+            address: "220.131.144.197",
             port: "8484",
             interval: 5000,
             values: [],
@@ -241,7 +241,7 @@ var servers = {
         }, {
             icon: "Croa.png",
             name: "喵喵谷",
-            address: "103.11.38.126",
+            address: "103.11.39.254",
             port: "18484",
             interval: 5000,
             values: [],
@@ -251,6 +251,33 @@ var servers = {
             icon: "Demethos.png",
             name: "農藥谷",
             address: "220.135.110.189",
+            port: "8484",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "登入伺服器"
+        }, {
+            icon: "Red.png",
+            name: "影子谷",
+            address: "180.177.22.125",
+            port: "8484",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "登入伺服器"
+        }, {
+            icon: "Zenith.png",
+            name: "醉夢谷",
+            address: "45.76.211.172",
+            port: "8484",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "登入伺服器"
+        }, {
+            icon: "Windia.png",
+            name: "飛飛谷",
+            address: "114.33.75.159",
             port: "8484",
             interval: 5000,
             values: [],
@@ -289,7 +316,7 @@ var servers = {
         Bootes: [{
             icon: "Bootes.png",
             name: "Channel 1",
-            address: "59.121.104.171",
+            address: "59.121.104.215",
             port: "8586",
             interval: 5000,
             values: [],
@@ -299,7 +326,7 @@ var servers = {
         Cassiopeia: [{
             icon: "Cassiopeia.png",
             name: "Channel 1",
-            address: "106.1.254.72",
+            address: "101.138.163.203",
             port: "8586",
             interval: 5000,
             values: [],
@@ -350,7 +377,7 @@ var servers = {
         Miaomiao: [{
             icon: "Croa.png",
             name: "Channel 1",
-            address: "103.11.38.126",
+            address: "103.11.39.254",
             port: "18586",
             interval: 5000,
             values: [],
@@ -366,6 +393,36 @@ var servers = {
             values: [],
             isMapleStoryGameServer: true,
             rel: "農藥谷"
+        }],
+        Shadow: [{
+            icon: "Red.png",
+            name: "Channel 1",
+            address: "180.177.22.125",
+            port: "8586",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "影子谷"
+        }],
+        Dream: [{
+            icon: "Zenith.png",
+            name: "Channel 1",
+            address: "45.76.211.172",
+            port: "14000",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "醉夢谷"
+        }],
+        FlyFly: [{
+            icon: "Windia.png",
+            name: "Channel 1",
+            address: "114.33.75.159",
+            port: "7575",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "飛飛谷"
         }],
     },
     TWMS117: {
@@ -387,8 +444,8 @@ var checker = {
         complete: false,
         icon: "StarPlanet.png",
         short: "TWMS113",
-        serverCount: [11],
-        applications: [GameServer("113", 8, [{
+        serverCount: [15],
+        applications: [GameServer("113", 15, [{
             icon: "Mushroom.png",
             name: "登入伺服器",
             english: false,
@@ -448,7 +505,22 @@ var checker = {
             name: "農藥谷",
             english: false,
             sub: "World"
-        }, ], [servers.TWMS113.Login, servers.TWMS113.Tongnian, servers.TWMS113.Aquila, servers.TWMS113.Bootes, servers.TWMS113.Cassiopeia, servers.TWMS113.Hercules, servers.TWMS113.Mianhua, servers.TWMS113.AsuraMS, servers.TWMS113.Xinba, servers.TWMS113.XiXi, servers.TWMS113.Miaomiao, servers.TWMS113.Pesticide, ])]
+        }, {
+            icon: "Red.png",
+            name: "影子谷",
+            english: false,
+            sub: "World"
+        }, {
+            icon: "Zenith.png",
+            name: "醉夢谷",
+            english: false,
+            sub: "World"
+        }, {
+            icon: "Windia.png",
+            name: "飛飛谷",
+            english: false,
+            sub: "World"
+        }, ], [servers.TWMS113.Login, servers.TWMS113.Tongnian, servers.TWMS113.Aquila, servers.TWMS113.Bootes, servers.TWMS113.Cassiopeia, servers.TWMS113.Hercules, servers.TWMS113.Mianhua, servers.TWMS113.AsuraMS, servers.TWMS113.Xinba, servers.TWMS113.XiXi, servers.TWMS113.Miaomiao, servers.TWMS113.Pesticide, servers.TWMS113.Shadow, servers.TWMS113.Dream, servers.TWMS113.FlyFly ])]
     }, {
         abbr: "TWMS117",
         name: "MapleStory 117",
