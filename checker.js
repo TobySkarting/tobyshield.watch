@@ -283,6 +283,15 @@ var servers = {
             values: [],
             isMapleStoryGameServer: true,
             rel: "登入伺服器"
+        }, {
+            icon: "Yellonde.png",
+            name: "喇叭谷",
+            address: "119.10.159.130",
+            port: "8484",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "登入伺服器"
         }],
         Tongnian: [{
             icon: "Gemini.png",
@@ -368,7 +377,7 @@ var servers = {
             icon: "Delphinus.png",
             name: "Channel 1",
             address: "119.10.159.186",
-            port: "8586",
+            port: "7575",
             interval: 5000,
             values: [],
             isMapleStoryGameServer: true,
@@ -378,7 +387,7 @@ var servers = {
             icon: "Croa.png",
             name: "Channel 1",
             address: "103.11.39.254",
-            port: "18586",
+            port: "7575",
             interval: 5000,
             values: [],
             isMapleStoryGameServer: true,
@@ -424,6 +433,16 @@ var servers = {
             isMapleStoryGameServer: true,
             rel: "飛飛谷"
         }],
+        Laba: [{
+            icon: "Yellonde.png",
+            name: "Channel 1",
+            address: "119.10.159.130",
+            port: "14000",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "喇叭谷"
+        }],
     },
     TWMS117: {
 
@@ -444,8 +463,8 @@ var checker = {
         complete: false,
         icon: "StarPlanet.png",
         short: "TWMS113",
-        serverCount: [15],
-        applications: [GameServer("113", 15, [{
+        serverCount: [16],
+        applications: [GameServer("113", 16, [{
             icon: "Mushroom.png",
             name: "登入伺服器",
             english: false,
@@ -520,7 +539,12 @@ var checker = {
             name: "飛飛谷",
             english: false,
             sub: "World"
-        }, ], [servers.TWMS113.Login, servers.TWMS113.Tongnian, servers.TWMS113.Aquila, servers.TWMS113.Bootes, servers.TWMS113.Cassiopeia, servers.TWMS113.Hercules, servers.TWMS113.Mianhua, servers.TWMS113.AsuraMS, servers.TWMS113.Xinba, servers.TWMS113.XiXi, servers.TWMS113.Miaomiao, servers.TWMS113.Pesticide, servers.TWMS113.Shadow, servers.TWMS113.Dream, servers.TWMS113.FlyFly ])]
+        }, {
+            icon: "Yellonde.png",
+            name: "喇叭谷",
+            english: false,
+            sub: "World"
+        }, ], [servers.TWMS113.Login, servers.TWMS113.Tongnian, servers.TWMS113.Aquila, servers.TWMS113.Bootes, servers.TWMS113.Cassiopeia, servers.TWMS113.Hercules, servers.TWMS113.Mianhua, servers.TWMS113.AsuraMS, servers.TWMS113.Xinba, servers.TWMS113.XiXi, servers.TWMS113.Miaomiao, servers.TWMS113.Pesticide, servers.TWMS113.Shadow, servers.TWMS113.Dream, servers.TWMS113.FlyFly, servers.TWMS113.Laba ])]
     }, {
         abbr: "TWMS117",
         name: "MapleStory 117",
