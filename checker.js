@@ -160,7 +160,7 @@ var servers = {
         Login: [{
             icon: "Gemini.png",
             name: "童年谷",
-            address: "220.135.55.5",
+            address: "118.164.112.187",
             port: "8484",
             interval: 5000,
             values: [],
@@ -178,7 +178,7 @@ var servers = {
         }, {
             icon: "Bootes.png",
             name: "懷舊谷",
-            address: "59.121.104.215",
+            address: "59.121.104.184",
             port: "8484",
             interval: 5000,
             values: [],
@@ -187,7 +187,7 @@ var servers = {
         }, {
             icon: "Cassiopeia.png",
             name: "奇奇谷",
-            address: "101.138.163.203",
+            address: "180.177.133.182",
             port: "8484",
             interval: 5000,
             values: [],
@@ -214,7 +214,7 @@ var servers = {
         }, {
             icon: "Elysium.png",
             name: "AsuraMS",
-            address: "220.131.144.197",
+            address: "220.131.144.225",
             port: "8484",
             interval: 5000,
             values: [],
@@ -250,7 +250,7 @@ var servers = {
         }, {
             icon: "Demethos.png",
             name: "農藥谷",
-            address: "220.135.110.189",
+            address: "210.201.89.190",
             port: "8484",
             interval: 5000,
             values: [],
@@ -292,11 +292,38 @@ var servers = {
             values: [],
             isMapleStoryGameServer: true,
             rel: "登入伺服器"
+        }, {
+            icon: "Aurora.png",
+            name: "啪啪谷",
+            address: "220.128.182.229",
+            port: "8484",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "登入伺服器"
+        }, {
+            icon: "Zenith.png",
+            name: "幻想谷",
+            address: "180.177.22.125",
+            port: "8484",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "登入伺服器"
+        }, {
+            icon: "Fornax.png",
+            name: "邊緣谷",
+            address: "127.0.0.1",
+            port: "8484",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "登入伺服器"
         }],
         Tongnian: [{
             icon: "Gemini.png",
             name: "Channel 1",
-            address: "220.135.55.5",
+            address: "118.164.112.187",
             port: "8586",
             interval: 5000,
             values: [],
@@ -325,7 +352,7 @@ var servers = {
         Bootes: [{
             icon: "Bootes.png",
             name: "Channel 1",
-            address: "59.121.104.215",
+            address: "59.121.104.184",
             port: "8586",
             interval: 5000,
             values: [],
@@ -335,7 +362,7 @@ var servers = {
         Cassiopeia: [{
             icon: "Cassiopeia.png",
             name: "Channel 1",
-            address: "101.138.163.203",
+            address: "180.177.133.182",
             port: "8586",
             interval: 5000,
             values: [],
@@ -396,7 +423,7 @@ var servers = {
         Pesticide: [{
             icon: "Demethos.png",
             name: "Channel 1",
-            address: "220.135.110.189",
+            address: "210.201.89.190",
             port: "8586",
             interval: 5000,
             values: [],
@@ -443,6 +470,36 @@ var servers = {
             isMapleStoryGameServer: true,
             rel: "喇叭谷"
         }],
+        Papa: [{
+            icon: "Aurora.png",
+            name: "Channel 1",
+            address: "220.128.182.229",
+            port: "8586",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "啪啪谷"
+        }],
+        Fantasy: [{
+            icon: "Zenith.png",
+            name: "Channel 1",
+            address: "180.177.22.125",
+            port: "8586",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "幻想谷"
+        }],
+        EdgeMs: [{
+            icon: "Fornax.png",
+            name: "Channel 1",
+            address: "127.0.0.1",
+            port: "8586",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "邊緣谷"
+        }],
     },
     TWMS117: {
 
@@ -463,8 +520,8 @@ var checker = {
         complete: false,
         icon: "StarPlanet.png",
         short: "TWMS113",
-        serverCount: [16],
-        applications: [GameServer("113", 16, [{
+        serverCount: [18],
+        applications: [GameServer("113", 18, [{
             icon: "Mushroom.png",
             name: "登入伺服器",
             english: false,
@@ -544,7 +601,22 @@ var checker = {
             name: "喇叭谷",
             english: false,
             sub: "World"
-        }, ], [servers.TWMS113.Login, servers.TWMS113.Tongnian, servers.TWMS113.Aquila, servers.TWMS113.Bootes, servers.TWMS113.Cassiopeia, servers.TWMS113.Hercules, servers.TWMS113.Mianhua, servers.TWMS113.AsuraMS, servers.TWMS113.Xinba, servers.TWMS113.XiXi, servers.TWMS113.Miaomiao, servers.TWMS113.Pesticide, servers.TWMS113.Shadow, servers.TWMS113.Dream, servers.TWMS113.FlyFly, servers.TWMS113.Laba ])]
+        }, {
+            icon: "Aurora.png",
+            name: "啪啪谷",
+            english: false,
+            sub: "World"
+        }, {
+            icon: "Zenith.png",
+            name: "幻想谷",
+            english: false,
+            sub: "World"
+        }, {
+            icon: "Fornax.png",
+            name: "邊緣谷",
+            english: false,
+            sub: "World"
+        }, ], [servers.TWMS113.Login, servers.TWMS113.Tongnian, servers.TWMS113.Aquila, servers.TWMS113.Bootes, servers.TWMS113.Cassiopeia, servers.TWMS113.Hercules, servers.TWMS113.Mianhua, servers.TWMS113.AsuraMS, servers.TWMS113.Xinba, servers.TWMS113.XiXi, servers.TWMS113.Miaomiao, servers.TWMS113.Pesticide, servers.TWMS113.Shadow, servers.TWMS113.Dream, servers.TWMS113.FlyFly, servers.TWMS113.Laba, servers.TWMS113.Papa, servers.TWMS113.Fantasy, servers.TWMS113.EdgeMs ])]
     }, {
         abbr: "TWMS117",
         name: "MapleStory 117",
