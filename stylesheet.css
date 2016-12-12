@@ -724,6 +724,10 @@ div.servers article.timeout div.status {
 	background: #F44336;
 }
 
+div.servers article.dead div.status {
+	background: #9E9E9E;
+}
+
 div.servers article.ok {
 	box-shadow: 0 0 3px 1px #4CAF50;
 }
@@ -734,6 +738,10 @@ div.servers article.slow {
 
 div.servers article.timeout {
 	box-shadow: 0 0 3px 1px #F44336;
+}
+
+div.servers article.dead {
+	box-shadow: 0 0 3px 1px #9E9E9E;
 }
 
 div.servers article.revealed {

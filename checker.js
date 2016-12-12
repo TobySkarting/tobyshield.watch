@@ -112,7 +112,7 @@ var PingModel = function(servers) {
                 address: server.address,
                 port: server.port,
                 unknown: server.unknown || false,
-                status: ko.observable('unchecked'),
+                status: server.isDead ? ko.observable('dead') : ko.observable('unchecked'),
                 time: ko.observable(""),
                 values: ko.observableArray(),
                 rel: server.rel
@@ -122,6 +122,9 @@ var PingModel = function(servers) {
     self.servers = ko.observableArray(myServers);
     processing += self.servers().length;
     ko.utils.arrayForEach(self.servers(), function(s) {
+
+        if (s.status() != 'dead') {
+
         s.status('checking');
         function doPing() {
             new ping(s.address + ":" + s.port,function(status, time, e) {
@@ -140,7 +143,8 @@ var PingModel = function(servers) {
         }
         setTimeout(function() {
             doPing();
-        }, checkDelay * offset++)
+        }, checkDelay * offset++);
+        }
     });
 };
 var GameServer = function(version, timeOffset, icons, servers) {
@@ -158,6 +162,46 @@ var GameServer = function(version, timeOffset, icons, servers) {
 var servers = {
     TWMS113: {
         Login: [{
+            icon: "NCU.ico",
+            name: "中央學術谷(歿)",
+            address: "140.115.26.45",
+            port: "8484",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: false,
+            isDead: true,
+            rel: "登入伺服器"
+        }, {
+            icon: "NCKU.ico",
+            name: "成大學術谷(歿)",
+            address: "140.116.103.126",
+            port: "8484",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            isDead: true,
+            rel: "登入伺服器"
+        }, {
+            icon: "",
+            name: "尻尻谷(歿)",
+            address: "114.34.29.180",
+            port: "8484",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            isDead: true,
+            rel: "登入伺服器"
+        }, {
+            icon: "",
+            name: "啾咪谷(歿)",
+            address: "45.76.97.134",
+            port: "8484",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            isDead: true,
+            rel: "登入伺服器"
+        }, {
             icon: "Gemini.png",
             name: "童年谷",
             address: "118.164.112.194",
@@ -558,8 +602,8 @@ var checker = {
         complete: false,
         icon: "StarPlanet.png",
         short: "TWMS113",
-        serverCount: [18],
-        applications: [GameServer("113", 18, [{
+        serverCount: [22],
+        applications: [GameServer("113", 22, [{
             icon: "Mushroom.png",
             name: "登入伺服器",
             english: false,
@@ -657,6 +701,11 @@ var checker = {
         }, {
             icon: "Galicia.png",
             name: "大峽谷",
+            english: false,
+            sub: "World"
+        }, {
+            icon: "Hercules.png",
+            name: "邊緣谷",
             english: false,
             sub: "World"
         }, ], [servers.TWMS113.Login, servers.TWMS113.Tongnian, servers.TWMS113.Aquila, servers.TWMS113.Bootes, servers.TWMS113.Cassiopeia, servers.TWMS113.Hercules, servers.TWMS113.Mianhua, servers.TWMS113.AsuraMS, servers.TWMS113.Xinba, servers.TWMS113.XiXi, servers.TWMS113.Miaomiao, servers.TWMS113.Pesticide, servers.TWMS113.Shadow, servers.TWMS113.Dream, servers.TWMS113.FlyFly, servers.TWMS113.Laba, servers.TWMS113.Papa, servers.TWMS113.Fantasy, servers.TWMS113.CryCry, servers.TWMS113.Canyon, servers.TWMS113.EdgeMs ])]
