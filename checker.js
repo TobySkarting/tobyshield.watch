@@ -162,8 +162,20 @@ var GameServer = function(version, timeOffset, icons, servers) {
 var servers = {
     TWMS113: {
         Login: [{
+            icon: "",
+            name: "SyncMS",
+            sub: "歿",
+            address: "188.166.249.220",
+            port: "8484",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: false,
+            isDead: true,
+            rel: "登入伺服器"
+        }, {
             icon: "NCU.ico",
-            name: "中央學術谷(歿)",
+            name: "中央學術谷",
+            sub: "歿",
             address: "140.115.26.45",
             port: "8484",
             interval: 5000,
@@ -173,7 +185,8 @@ var servers = {
             rel: "登入伺服器"
         }, {
             icon: "NCKU.ico",
-            name: "成大學術谷(歿)",
+            name: "成大學術谷",
+            sub: "歿",
             address: "140.116.103.126",
             port: "8484",
             interval: 5000,
@@ -183,7 +196,8 @@ var servers = {
             rel: "登入伺服器"
         }, {
             icon: "",
-            name: "尻尻谷(歿)",
+            name: "尻尻谷",
+            sub: "歿",
             address: "114.34.29.180",
             port: "8484",
             interval: 5000,
@@ -193,7 +207,8 @@ var servers = {
             rel: "登入伺服器"
         }, {
             icon: "",
-            name: "啾咪谷(歿)",
+            name: "啾咪谷",
+            sub: "歿",
             address: "45.76.97.134",
             port: "8484",
             interval: 5000,
@@ -293,7 +308,8 @@ var servers = {
             rel: "登入伺服器"
         }, {
             icon: "Demethos.png",
-            name: "夢幻谷(原農藥) ",
+            name: "夢幻谷 ",
+            sub: "原農藥谷",
             address: "210.201.89.190",
             port: "8484",
             interval: 5000,
@@ -312,11 +328,13 @@ var servers = {
         }, {
             icon: "Zenith.png",
             name: "醉夢谷",
+            sub: "歿",
             address: "45.76.211.172",
             port: "8484",
             interval: 5000,
             values: [],
             isMapleStoryGameServer: true,
+            isDead: true,
             rel: "登入伺服器"
         }, {
             icon: "Windia.png",
