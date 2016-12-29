@@ -262,9 +262,9 @@ var servers = {
             rel: "登入伺服器"
         }, {
             icon: "",
-            name: "微光谷",
+            name: "啾咪谷",
             sub: "歿",
-            address: "220.133.156.181",
+            address: "45.76.97.134",
             port: "8484",
             interval: 5000,
             values: [],
@@ -272,19 +272,9 @@ var servers = {
             isDead: true,
             rel: "登入伺服器"
         }, {
-            icon: "",
-            name: "啾咪谷",
-            sub: "將歿",
-            address: "45.76.97.134",
-            port: "8484",
-            interval: 5000,
-            values: [],
-            isMapleStoryGameServer: true,
-            rel: "登入伺服器"
-        }, {
             icon: "Gemini.png",
             name: "童年谷",
-            address: "111.240.254.242",
+            address: "118.164.112.211",
             port: "8484",
             interval: 5000,
             values: [],
@@ -302,7 +292,7 @@ var servers = {
         }, {
             icon: "Bootes.png",
             name: "懷舊谷",
-            address: "59.121.104.127",
+            address: "59.121.104.135",
             port: "8484",
             interval: 5000,
             values: [],
@@ -311,16 +301,17 @@ var servers = {
         }, {
             icon: "Hercules.png",
             name: "瘋子谷",
-            address: "103.44.162.42",
+            address: "103.44.162.43",
             port: "8484",
             interval: 5000,
             values: [],
             isMapleStoryGameServer: true,
+            isDead: true,
             rel: "登入伺服器"
         }, {
             icon: "Elysium.png",
             name: "AsuraMS",
-            address: "220.131.144.14",
+            address: "220.131.144.43",
             port: "8484",
             interval: 5000,
             values: [],
@@ -393,7 +384,7 @@ var servers = {
         }, {
             icon: "Arcania.png",
             name: "幻想谷",
-            address: "180.177.26.160",
+            address: "180.177.26.46",
             port: "8484",
             interval: 5000,
             values: [],
@@ -402,7 +393,7 @@ var servers = {
         }, {
             icon: "Fornax.png",
             name: "哭哭谷",
-            address: "36.234.118.174",
+            address: "61.224.87.49",
             port: "8484",
             interval: 5000,
             values: [],
@@ -421,6 +412,15 @@ var servers = {
             icon: "Supreme.png",
             name: "邊緣谷",
             address: "202.80.104.25",
+            port: "8484",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "登入伺服器"
+        }, {
+            icon: "",
+            name: "微光谷",
+            address: "220.133.156.181",
             port: "8484",
             interval: 5000,
             values: [],
@@ -447,7 +447,52 @@ var servers = {
         }, {
             icon: "Khaini.png",
             name: "溫馨谷",
-            address: "1.163.215.177",
+            address: "1.163.215.88",
+            port: "8484",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "登入伺服器"
+        }, {
+            icon: "Khaini.png",
+            name: "飄雪谷",
+            address: "220.132.168.20",
+            port: "8484",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "登入伺服器"
+        }, {
+            icon: "Khaini.png",
+            name: "冬之谷",
+            address: "103.225.9.70",
+            port: "19487",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "登入伺服器"
+        }, {
+            icon: "Khaini.png",
+            name: "布蕾谷",
+            address: "119.10.159.202",
+            port: "8484",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "登入伺服器"
+        }, {
+            icon: "Khaini.png",
+            name: "花千谷",
+            address: "119.10.159.74",
+            port: "8484",
+            interval: 5000,
+            values: [],
+            isMapleStoryGameServer: true,
+            rel: "登入伺服器"
+        }, {
+            icon: "Khaini.png",
+            name: "咕咕谷",
+            address: "36.239.168.253",
             port: "8484",
             interval: 5000,
             values: [],
@@ -457,7 +502,7 @@ var servers = {
         Tongnian: [{
             icon: "Gemini.png",
             name: "Channel 1",
-            address: "111.240.254.242",
+            address: "118.164.112.211",
             port: "8586",
             interval: 5000,
             values: [],
@@ -486,7 +531,7 @@ var servers = {
         Bootes: [{
             icon: "Bootes.png",
             name: "Channel 1",
-            address: "59.121.104.127",
+            address: "59.121.104.135",
             port: "8586",
             interval: 5000,
             values: [],
